@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class  quizApp {
+	public static void main ( String[] args) {
+		
+		String q1= "If 5x + 32 = 4 minus 2x what is the value of x ?" 
+		            +"\n(a)-4 \n(b)-3\n(c)4 \n(d)7";
+				
+		String q2= "A certain jar contains 60 jelly beans — 22 white, 18 green, 11 yellow, 5 red, and 4 purple. If a jelly bean is to be chosen at random, what is the probability that the jelly bean will be neither red nor purple?"
+		            +"\n (a) 0.09 \n(b)0.15 \n (c)0.54 \n (d) 0.85\n (e)0.91";
+		
+		
+		Question [] questions = {
+				
+				new Question(q1,"a"),
+				new Question(q2,"d") 
+				
+ };
+		takeTest(questions);
+	
+	}		
+		public static void takeTest(Question [] questions) {
+			int score= 0;
+			Scanner keyboardInput = new Scanner(System.in);
+			
+			for(int i=0; i<questions.length; i++) {
+			System.out.println(questions[i].prompt );	
+			System.out.println("Input your Answer");
+			String answer = keyboardInput.nextLine();
+			
+			if (answer.equals(questions[i].answer)) {
+				score++ ;
+	}
+			 
+}
+			
+			System.out.println("you got" + score + "/" +questions.length );
+  }
+		
+ }
+	
