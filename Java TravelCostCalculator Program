@@ -1,0 +1,49 @@
+
+   /*
+	 * This program will help in calculating the travel costs by tracking  variables like 
+	 * distance,averageGallonPerMile, pricePerGallon,totalCostOfTrip
+	 * 
+	 
+	*/
+
+	import java.util.Scanner;
+	/**
+	 * @author: Arpitha
+	 *
+	 */
+	public class TravelCostCalculator  {
+		
+		public static void main (String[] args) {
+			
+			double distance, averageGallonPerMile, currentPricePerGallon,totalCostOfTrip;
+			String vehicleModel;
+		
+			Scanner var =new Scanner (System.in);
+			System.out.println(" Enter the total distance to travel in miles :");
+			distance=var.nextDouble();
+			
+			System.out.println(" Enter the averagemilepergallon :  ");
+			averageGallonPerMile=var.nextDouble();
+			
+			System.out.println("Enter the currentpricepergallon :");
+			currentPricePerGallon=var.nextDouble();
+			
+			System.out.println(" Enter your car model :" );
+			vehicleModel=var.next();
+			
+			totalCostOfTrip= (distance/averageGallonPerMile)*currentPricePerGallon;
+			System.out.printf (" \n The total cost of your trip will be $%5.2f since you are driving " + "a " + vehicleModel, totalCostOfTrip);
+			
+		
+			
+			System.out.println(" \n Have a safe and fun trip :)");	
+			
+			
+			
+			
+		}
+
+	}
+
+	
+
